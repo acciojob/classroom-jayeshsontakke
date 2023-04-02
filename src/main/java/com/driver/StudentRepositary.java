@@ -21,7 +21,7 @@ public class StudentRepositary {
 
     }
     public void addStudentTeacherPair(String student,String teacher){
-        List<String>list=studentTeacherPair.get(teacher);
+        List<String>list=studentTeacherPair.getOrDefault(teacher,null);
         if(list==null){
             list=new ArrayList<>();
         }
@@ -45,7 +45,7 @@ public class StudentRepositary {
         return null;
     }
     public List<String> getStudentsByTeacherName(String teacher){
-     List<String >list=studentTeacherPair.get(teacher);
+     List<String >list=studentTeacherPair.getOrDefault(teacher,null);
      if(list==null)
       return null;
      else {
