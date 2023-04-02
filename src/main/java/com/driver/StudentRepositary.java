@@ -45,9 +45,14 @@ public class StudentRepositary {
         return null;
     }
     public List<String> getStudentsByTeacherName(String teacher){
-
+     List<String >list=studentTeacherPair.get(teacher);
+     if(list==null)
       return null;
+     else {
+         return list;
+     }
     }
+
     public  List<String>getAllStudents(){
         List<String>list=new ArrayList<>();
         for(Student student:studentDb.values()){
