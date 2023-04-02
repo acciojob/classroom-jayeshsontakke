@@ -7,8 +7,8 @@ import java.util.List;
 
 @Service
 public class StudentService {
-    @Autowired
-    StudentRepositary studentRepositary;
+
+    StudentRepositary studentRepositary=new StudentRepositary();
     public void addStudent(Student student){
         studentRepositary.addStudent(student);
     }
